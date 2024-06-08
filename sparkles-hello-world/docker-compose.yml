@@ -5,10 +5,10 @@ services:
   app_proxy:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_honeygain_1
+      APP_HOST: sparkles-hello-world_myst-node_1
       APP_PORT: 3000
     
   server:
-    image: honeygain/honeygain:latest
+    image: mysteriumnetwork/myst:latest
     user: "1000:1000"
     init: true
