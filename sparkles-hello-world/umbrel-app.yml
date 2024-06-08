@@ -1,19 +1,19 @@
 manifestVersion: 1
 id: sparkles-hello-world
-name: Hello World
+name: Mysterium Node
 tagline: Replace this tagline with your app's tagline
-icon: https://www.gravatar.com/avatar/39ce7371579cda957c8c2cecd7a2f7aa?s=120&r=g&d=404
+icon: https://cdn.bulbapp.io/frontend/images/9dc0a0c3-7c03-498b-9c3a-d993eb713461/1
 category: Development
-version: "0.8.1"
-port: 4000
+version: "1.29.21"
+port: 4449
 description: >-
   Add your app's description here.
 
 
   You can also add newlines!
 
-developer: honeygain
-website: https://umbrel.com
+developer: mysteriumnetwork
+website: https://www.mystnodes.com/
 submitter: XPXWORD
 submission: https://github.com/getumbrel/umbrel-hello-world-app
 repo: https://github.com/getumbrel/umbrel-hello-world-app
