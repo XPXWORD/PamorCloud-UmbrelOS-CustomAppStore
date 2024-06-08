@@ -1,14 +1,19 @@
-version: "3.7"
+version: '3'
 
 services:
-
-  app_proxy:
-    environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_myst-node_1
-      APP_PORT: 3000
-    
-  server:
+  myst:
     image: mysteriumnetwork/myst:latest
-    user: "1000:1000"
-    init: true
+    container_name: myst
+    ports:
+      - "1194:1194/udp"
+      - "4447:4447"
+    volumes:
+      - ./data:/var/lib/mysterium-node
+    environment:
+      - MYSTERIUM_TEQUILAPI_ADDRESS=0.0.0.0
+      - MYSTERIUM_LOCATION_COUNTRY=US
+      - MYSTERIUM_LOCATION_CITY=New York
+      - MYSTERIUM_LOCATION_LATITUDE=40.730610
+      - MYSTERIUM_LOCATION_LONGITUDE=-73.935242
+      - MYSTERIUM_IDENTITY_PASSPHRASE=your_passphrase
+    restart: always
